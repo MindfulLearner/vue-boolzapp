@@ -6,11 +6,14 @@
     height: 75px;
         overflow: hidden;
         padding-left: 10px;
+        justify-content: space-between;
+        padding-right: 10px;
 }
 
 .card-img-text-container {
     display: flex;
     gap: 10px;
+    
 }
 
 .card-comando > .card-img-text-container > .cerchio-pfp {
@@ -31,6 +34,9 @@ font-weight: 600;
     color: grey;
 }
 
+.card-orario-invio {
+justify-content: end;
+}
 
 
 
