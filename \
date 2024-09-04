@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>zazapp</title>
+
+        <link rel="stylesheet"  href="./css/global.css">
+
+        <!-- stilizzazione containers principali -->
+        <link href="./css/container.css" rel="stylesheet">
+        <link href="./css/containerSettoreComando.css" rel="stylesheet">
+        <link href="./css/containerSettoreChat.css" rel="stylesheet">
+
+        <!-- stilizzazione componenti dentro container settore COMANDO -->
+        <link href="./css/settoreComando/headerUtente.css" rel="stylesheet">
+        <link href="./css/settoreComando/notifiche.css" rel="stylesheet">
+        <link href="./css/settoreComando/barraRicerca.css" rel="stylesheet">
+        <link href="./css/settoreComando/contattoActive.css" rel="stylesheet">
+        <link href="./css/settoreComando/contattiCard.css" rel="stylesheet">
+
+        <!-- stilizzazione componenti dentro container settore CHAT -->
+        <link href="./css/settoreChat/headerUtenteActive.css" rel="stylesheet">
+        <link href="./css/settoreChat/postMessage.css" rel="stylesheet">
+        <link href="./css/settoreChat/getMessage.css" rel="stylesheet">
+        <link href="./css/settoreChat/chatBox.css" rel="stylesheet">
+
+    </head>
+
+    <body class="sfondo-gradiente">
+        <div id="app">
+            <div class="container">
+                <div class="settore-comando">
+
+                </div>
+
+                <div class="settore-chat">
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+        <script src="./data/dataUtenti.js"> </script>
+        <script src="./data/dataMessaggi.js"> </script>
+        <script src = "./script/scripts.js"> </script>    
+
+    </body>
+</html>

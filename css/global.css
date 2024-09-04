@@ -1,0 +1,32 @@
+/* globale con root e var etc..*/
+
+* {
+    margin: 0;    
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    border: 1px dashed black; 
+}
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+ }
+
+
+.sfondo-gradiente {
+    background: linear-gradient(0deg, #2beead 0%, #0b3730 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+:root {
+}
+
+
+

@@ -1,0 +1,33 @@
+/* notifiche box */
+
+.notifiche-comando {
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    height: 70px;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+
+.notifiche-comando > .cerchio-pfp > i {
+    font-size: 20px; 
+    color: lightblue;
+}
+
+.notifiche-comando > .cerchio-pfp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+
+
+
+
+
+
+

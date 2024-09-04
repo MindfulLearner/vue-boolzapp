@@ -1,1 +1,17 @@
 /* container totale */ 
+
+#app {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1376px;
+    height: calc(100vh - 60px);
+    background-color: white ;
+    display: flex;
+}
+
+
+
