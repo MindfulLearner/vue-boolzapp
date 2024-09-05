@@ -4,21 +4,33 @@
 .card-comando {
     display: flex;
     height: 75px;
-        overflow: hidden;
-        padding-left: 10px;
-        justify-content: space-between;
-        padding-right: 10px;
+    padding-left: 10px;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
 }
+
+.nonlultimo:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.sswag-overflou {
+    overflow: auto;
+    height: calc(100% - 193px);
+
+}
+
 
 .card-img-text-container {
     display: flex;
     gap: 10px;
-    
+
 }
 
 .card-comando > .card-img-text-container > .cerchio-pfp {
-height: 60px;
-width: auto;
+    height: 60px;
+    width: auto;
 }
 
 .card-comando > .card-img-text-container > .cerchio-pfp > img {
@@ -28,14 +40,14 @@ width: auto;
 }
 
 .flex > div:first-child {
-font-weight: 600;
+    font-weight: 600;
 }
 .flex > div:last-child {
     color: grey;
 }
 
 .card-orario-invio {
-justify-content: end;
+    justify-content: end;
 }
 
 
