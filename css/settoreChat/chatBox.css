@@ -1,0 +1,11 @@
+/* containere  box */
+
+.chat-container-box {
+    height: 100%;
+    padding: 50px;
+    padding-right: 70px;
+    padding-left: 70px;
+    background-image: url(../../img/mine.jpg);
+    overflow-y: scroll;
+}
+

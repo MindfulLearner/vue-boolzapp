@@ -1,0 +1,31 @@
+/* message post */
+
+
+
+.mio-messaggio-container {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: auto;
+    gap: 20px;
+}
+
+
+.chat-container-box > div:first-child {
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

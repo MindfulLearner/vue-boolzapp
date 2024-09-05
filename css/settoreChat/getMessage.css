@@ -1,0 +1,15 @@
+/* amico mesage */
+
+.amico-messaggio-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: auto;
+    gap: 20px;
+}
+
+.chat-container-box > div:last-child {
+    display: flex;
+    justify-content: start;
+}

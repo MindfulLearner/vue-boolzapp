@@ -1,0 +1,43 @@
+/* message container chat */
+
+
+.message-container-box {
+    height: 79px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.chatbox-box {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    color: lightgrey;
+    height: 50px;
+}
+
+.chatbox-box > input {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.message-container-box > div:first-child {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    color: grey;
+    font-size: 20px;
+}
+.message-container-box > div:last-child {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-size: 20px;
+
+}
