@@ -10,12 +10,17 @@ createApp (
                 messaggiAmico: dataMessaggiAmico,
                 attivo: "",
                 indiceAttivo: 0,
+                messaggioMostrato: '',
             }
         },
         methods: {
             selezionato(i) {
                 this.indiceAttivo = i;
                 console.log(this.indiceAttivo);
+
+
+
+
             }
         } 
     }

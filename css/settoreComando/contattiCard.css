@@ -7,8 +7,6 @@
     padding-left: 10px;
     justify-content: space-between;
 
-    margin-bottom: 20px;
-
 }
 
 .nonlultimo:not(:last-child) {
@@ -28,12 +26,12 @@
 
 }
 
-.card-comando > div > .card-img-text-container > .cerchio-pfp {
+.card-comando > .card-img-text-container > .cerchio-pfp {
     height: 60px;
     width: auto;
 }
 
-.card-comando > div > .card-img-text-container > .cerchio-pfp > img {
+.card-comando > .card-img-text-container > .cerchio-pfp > img {
     width: 100%;
     height: 100%;
     border-radius: 50%;

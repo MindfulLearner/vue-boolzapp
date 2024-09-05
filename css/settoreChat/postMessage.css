@@ -12,9 +12,8 @@
 }
 
 
-.chat-container-box > div >  div:first-child {
+.chat-container-box > div {
     display: flex;
-    justify-content: end;
 }
 
 
