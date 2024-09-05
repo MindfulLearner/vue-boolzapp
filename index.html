@@ -78,9 +78,8 @@
                             <div>
                                 <i class="fas fa-search"></i>
                             </div> 
-                            <div>
-                                Cerca o inizia una nuova chat
-                            </div>
+                            <input placeholder="Cerca o inizia uno nuova chat">
+
                         </div>
                     </div>
 
@@ -134,14 +133,8 @@
 
 
                     <div class="chat-container-box">
-                        
-                            <div 
-                                v-for="(message, index) in cards[indiceAttivo].messages" 
-                                :style="{ justifyContent: message.status == 'sent' ? 'end' : 'start' }" 
-                                class="messaggio-container"
-                                >
-                                <!-- Contenitore dinamico in base allo status del messaggio -->
-                                <div :class="message.status === 'sent' ? 'mio-messaggio-container' : 'amico-messaggio-container'">
+                            <div v-for="(message, index) in cards[indiceAttivo].messages" :style="{ justifyContent: message.status == 'sent' ? 'end' : 'start' }" class="messaggio-container" >
+                                <div :class="message.status == 'sent' ? 'mio-messaggio-container' : 'amico-messaggio-container'">
                                     <div class="messaggio-post">
                                         {{ message.message }}
                                     </div>
@@ -160,7 +153,7 @@
                             <i class="fas fa-smile"></i>
                         </div>
                         <div class="chatbox-box">
-                            <input placeholder="invia messaggio" type="" name="" value=""> 
+                            <input v-model="messaggio" @keydown.enter.prevent = "mandaMessaggio"  placeholder="invia messaggio" type="testo"> 
                         </div>
                         <div>
                             <i class="fas fa-microphone"></i>
