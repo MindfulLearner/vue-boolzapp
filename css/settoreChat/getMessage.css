@@ -9,7 +9,7 @@
     gap: 20px;
 }
 
-.chat-container-box > div:last-child {
+.chat-container-box > div > div:last-child {
     display: flex;
     justify-content: start;
 }

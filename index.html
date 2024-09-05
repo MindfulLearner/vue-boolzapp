@@ -85,23 +85,30 @@
                     </div>
 
                     <div class="sswag-overflou">
-                        <div v-for = "(card, index) in cards"  class="card-comando nonlultimo">
-                            <div class="card-img-text-container">
-                                <div class="cerchio-pfp">
-                                    <img :src="card.avatar" alt="">
-                                </div>            
-                                <div class="flex">
-                                    <div>
-                                        {{ card.name }} 
-                                    </div> 
-                                    <div>
-                                        messaggio inviato
+                        <div @click = "selezionato(index)" v-for = "(card, index) in cards"  class="card-comando nonlultimo">
+                            <div v-if = "index == indiceAttivo">
+                                <div class="card-img-text-container">
+                                    <div class="cerchio-pfp">
+                                        <img :src="card.avatar" alt="">
+                                    </div>            
+                                    <div class="flex">
+                                        <div>
+                                            {{ card.name }} 
+                                        </div> 
+                                        <div>
+                                            messaggio inviato
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="card-orario-invio">
+                                    {{ card.date }}  
+                                </div>
                             </div>
-                            <div class="card-orario-invio">
-                                {{ card.date }}  
+
+                            <div v-else>
+
                             </div>
+
                         </div>
 
                     </div>
@@ -134,23 +141,25 @@
 
 
                     <div class="chat-container-box">
-                        <div>
-                            <div class="mio-messaggio-container">
-                                <div class="messaggio-post">
-                                    josh
-                                </div>
-                                <div class="orario-messaggio">
-                                    cdaw
+                        <div v-for = "(card,index) in cards"> 
+                            <div v-if = "index == 0">
+                                <div class="mio-messaggio-container">
+                                    <div class="messaggio-post">
+                                        {{ card.messages[index].message }}
+                                    </div>
+                                    <div class="orario-messaggio">
+                                        cdaw
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="amico-messaggio-container">
-                                <div class="messaggio-post">
-                                    ciao
-                                </div>
-                                <div class="orario-messaggio">
-                                    orardio
+                            <div v-if = "index == 0">
+                                <div class="amico-messaggio-container">
+                                    <div class="messaggio-post">
+                                        {{ card.messages[index + 2].message }}
+                                    </div>
+                                    <div class="orario-messaggio">
+                                        orardio
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +172,7 @@
                             <i class="fas fa-smile"></i>
                         </div>
                         <div class="chatbox-box">
-                           <input placeholder="invia messaggio" type="" name="" value=""> 
+                            <input placeholder="invia messaggio" type="" name="" value=""> 
                         </div>
                         <div>
                             <i class="fas fa-microphone"></i>
