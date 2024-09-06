@@ -8,28 +8,19 @@ createApp (
                 cards: dataUsers,
                 messaggiUtente: dataMessaggiUtente,
                 messaggiAmico: dataMessaggiAmico,
-
-
                 attivo: "",
                 indiceAttivo: 0,
-
-
                 messaggioMostrato: '',
                 messaggio: '',
-
                 ricerca: '',
-
                 cardActive: 0,
                 indexVecchio: 0,
-
-
             }
         },
         methods: {
             selezionato(i) {
                 this.cardActive = this.swagBarraRicerca[i];
                 this.indexVecchio = this.cards.findIndex(cardSwag => cardSwag.name == this.cardActive.name);
-
                 this.indiceAttivo = this.indexVecchio;
                 console.log(this.indiceAttivo);
             },
