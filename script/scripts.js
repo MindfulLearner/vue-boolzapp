@@ -67,7 +67,8 @@ createApp (
             mandaMessaggio() {
                 this.fetchDogApi();
                 const dataLuxon = luxon.DateTime.now();
-                if (this.messaggio.trim()){ 
+                this.fetchDogApi();
+                if (this.messgio.trim()){ 
                     this.cards[this.indiceAttivo].messages.push({date: `${dataLuxon.day}/${dataLuxon.month}/${dataLuxon.year} ${dataLuxon.hour}:${dataLuxon.minute}:${dataLuxon.second}`, message: this.messaggio, status: 'sent'});
                     this.messaggio =  '';
                     setTimeout(() => {
