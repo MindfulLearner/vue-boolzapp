@@ -78,13 +78,12 @@
                             <div>
                                 <i class="fas fa-search"></i>
                             </div> 
-                            <input placeholder="Cerca o inizia uno nuova chat">
-
+                            <input v-model = "ricerca" placeholder="Cerca o inizia uno nuova chat">
                         </div>
                     </div>
 
                     <div class="sswag-overflou">
-                        <div :class = "{ 'background-active': index != indiceAttivo }"  @click = "selezionato(index)" v-for = "(card, index) in cards"  class="card-comando nonlultimo">
+                        <div :class = "{ 'background-active': index != indiceAttivo }"  @click = "selezionato(index)" v-for = "(card, index) in swagBarraRicerca"  class="card-comando nonlultimo">
                             <div class="card-img-text-container">
                                 <div class="cerchio-pfp">
                                     <img :src="card.avatar" alt="">
@@ -131,19 +130,18 @@
                     </div>
 
 
-
                     <div class="chat-container-box">
-                            <div v-for="(message, index) in cards[indiceAttivo].messages" :style="{ justifyContent: message.status == 'sent' ? 'end' : 'start' }" class="messaggio-container" >
-                                <div :class="message.status == 'sent' ? 'mio-messaggio-container' : 'amico-messaggio-container'">
-                                    <div class="messaggio-post">
-                                        {{ message.message }}
-                                    </div>
-                                    <div class="orario-messaggio">
-                                        {{ message.date }}
-                                    </div>
+                        <div v-for="(message, index) in cards[indiceAttivo].messages" :style="{ justifyContent: message.status == 'sent' ? 'end' : 'start' }" class="messaggio-container" >
+                            <div :class="message.status == 'sent' ? 'mio-messaggio-container' : 'amico-messaggio-container'">
+                                <div class="messaggio-post">
+                                    {{ message.message }}
                                 </div>
+
+                            <div class="orario-messaggio">
+                                {{ message.date }}
                             </div>
-                       
+                            </div>
+                        </div>
                     </div>
 
 
