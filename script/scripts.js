@@ -68,11 +68,11 @@ createApp (
                 this.fetchDogApi();
                 const dataLuxon = luxon.DateTime.now();
                 this.fetchDogApi();
-                if (this.messgio.trim()){ 
+                if (this.messaggio.trim()){ 
                     this.cards[this.indiceAttivo].messages.push({date: `${dataLuxon.day}/${dataLuxon.month}/${dataLuxon.year} ${dataLuxon.hour}:${dataLuxon.minute}:${dataLuxon.second}`, message: this.messaggio, status: 'sent'});
                     this.messaggio =  '';
                     setTimeout(() => {
-                        this.cards[this.indiceAttivo].messages.push({date: '10/02/2024 15:22:01', message: 'Razza cane: ' + this.razzaACaso, status: 'received'});
+                        this.cards[this.indiceAttivo].messages.push({date: `${dataLuxon.day}/${dataLuxon.month}/${dataLuxon.year} ${dataLuxon.hour}:${dataLuxon.minute}:${dataLuxon.second}`, message: 'Razza cane: ' + this.razzaACaso, status: 'received'});
                     }, 1000);
                 }
             },
