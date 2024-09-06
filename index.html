@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="sswag-overflou">
-                        <div :class = "{ 'background-active': index != indiceAttivo }"  @click = "selezionato(index)" v-for = "(card, index) in swagBarraRicerca"  class="card-comando nonlultimo">
+                        <div :class = "{ 'background-active': card.name == cards[indiceAttivo].name }"  @click = "selezionato(index)" v-for = "(card, index) in swagBarraRicerca" class="card-comando nonlultimo">
                             <div class="card-img-text-container">
                                 <div class="cerchio-pfp">
                                     <img :src="card.avatar" alt="">
