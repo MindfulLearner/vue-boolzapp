@@ -30,6 +30,10 @@
         <link href="./css/settoreChat/getMessage.css" rel="stylesheet">
         <link href="./css/settoreChat/chatBox.css" rel="stylesheet">
 
+
+        <!-- Dropdown -->
+        <link href="./css/dropdown.css" rel="stylesheet">
+
         <!-- MONTSERRAT --> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +97,7 @@
                                         {{ card.name }} 
                                     </div> 
                                     <div>
-                                        messaggio inviato
+                                        {{ orarioMessaggio }}
                                     </div>
                                 </div>
                             </div>
@@ -129,17 +133,23 @@
                         </div>
                     </div>
 
-
+                    <!-- chat box -->
                     <div class="chat-container-box">
-                        <div v-for="(message, index) in cards[indiceAttivo].messages" :style="{ justifyContent: message.status == 'sent' ? 'end' : 'start' }" class="messaggio-container" >
-                            <div :class="message.status == 'sent' ? 'mio-messaggio-container' : 'amico-messaggio-container'">
+                        <div v-for="(message, index) in cards[indiceAttivo].messages" :style="{ justifyContent: message.status == 'sent' ? 'end' : 'start' }" class="messaggio-container">
+                            <div :class="message.status == 'sent' ? 'mio-messaggio-container' : 'amico-messaggio-container'" @mouseenter="mostraDropDown(index)" @mouseleave="nascondiDropDown(index)">
                                 <div class="messaggio-post">
                                     {{ message.message }}
                                 </div>
 
-                            <div class="orario-messaggio">
-                                {{ message.date }}
-                            </div>
+                                <div class="orario-messaggio">
+                                    {{ message.date }}
+                                </div>
+                                <div v-if="message.dropDownAttivo" class="dropdown-tendina" @mouseenter="mostraDropDown(index)" @mouseleave="nascondiDropDown(index)">
+                                    <ul style="list-style-type: none;">
+                                        <li>swag</li>
+                                        <li @click = "eliminaMessaggio(index)">Elimina Messaggio</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,6 +175,7 @@
         </div>
 
         <!-- ciao -->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
         <script src="./data/dataUtenti.js"> </script>
